@@ -45,7 +45,7 @@ public class AnimeHouse extends javax.swing.JFrame {
         getContentPane().add(pnlMainScreen, "MainScreen");
 
         // Start with the loading screen
-        loadScreen("MainScreen");
+        loadScreen("LoginScreen");
     }
 
     private void initializeAnimeData() {
@@ -673,7 +673,7 @@ public class AnimeHouse extends javax.swing.JFrame {
         txtFldUsername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtFldUsername.setForeground(new java.awt.Color(255, 255, 255));
         txtFldUsername.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFldUsername.setText("admin");
+        txtFldUsername.setText("username");
         txtFldUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtFldUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -716,7 +716,7 @@ public class AnimeHouse extends javax.swing.JFrame {
         pwdFldPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         pwdFldPassword.setForeground(new java.awt.Color(18, 12, 71));
         pwdFldPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pwdFldPassword.setText("admin");
+        pwdFldPassword.setText("password");
         pwdFldPassword.setActionCommand("<Not Set>");
         pwdFldPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pwdFldPassword.addActionListener(new java.awt.event.ActionListener() {
