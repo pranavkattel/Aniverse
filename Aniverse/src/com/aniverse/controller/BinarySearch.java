@@ -12,19 +12,28 @@ import java.util.List;
  * @author Pranav
  */
 public class BinarySearch {
-    public AnimeModel searchByName(String searchValue, List<AnimeModel> animeList, int left, int right) {
+   public AnimeModel searchByTitle(String searchValue, List<AnimeModel> animeList,
+            int left, int right) {
+
+        // Base Case: if the right index is smaller than left, return null
         if (right < left) {
             return null;
         }
 
+        // Calculate mid index
         int mid = (left + right) / 2;
 
-        if (searchValue.equalsIgnoreCase(animeList.get(mid).getTitle())) {
+        // Check if searchValue matches the title at the mid index
+        if (searchValue.compareToIgnoreCase(animeList.get(mid).getTitle()) == 0) {
             return animeList.get(mid);
-        } else if (searchValue.compareToIgnoreCase(animeList.get(mid).getTitle()) < 0) {
-            return searchByName(searchValue, animeList, left, mid - 1);
-        } else {
-            return searchByName(searchValue, animeList, mid + 1, right);
+        } 
+        // If the search value is smaller, search the left half
+        else if (searchValue.compareToIgnoreCase(animeList.get(mid).getTitle()) < 0) {
+            return searchByTitle(searchValue, animeList, left, mid - 1);
+        } 
+        // If the search value is greater, search the right half
+        else {
+            return searchByTitle(searchValue, animeList, mid + 1, right);
         }
     }
 }
